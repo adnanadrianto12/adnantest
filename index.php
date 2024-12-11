@@ -1,11 +1,11 @@
-<?php include 'config.php'; 
-
-if (!extension_loaded('mysqli')) {
-    die('Ekstensi MySQLi tidak tersedia.');
+<?php
+if (extension_loaded('mysqli')) {
+    echo "Ekstensi MySQLi terinstal!";
 } else {
-    echo 'Ekstensi MySQLi tersedia.';
+    echo "Ekstensi MySQLi TIDAK terinstal!";
 }
 ?>
+
 
 
 <!DOCTYPE html>
