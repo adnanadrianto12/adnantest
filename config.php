@@ -4,14 +4,13 @@ $db_name = 'if0_37810105_scores'; // Nama database Anda
 $username = 'if0_37810105'; // Username MySQL
 $password = 'DyJJBW6jyRbG'; // Password MySQL
 
-// Menggunakan PDO untuk menghubungkan ke database MySQL
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$db_name", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully"; 
-}
-catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
+// Koneksi dengan MySQLi
+$conn = new mysqli($host, $username, $password, $db_name);
 
+// Memeriksa koneksi
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} else {
+    echo "Connected successfully";
+}
 ?>
