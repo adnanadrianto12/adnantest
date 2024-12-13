@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Embed</title>
+    <title>Waduhhh</title>
     <style>
         body {
             margin: 0;
@@ -11,53 +11,88 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #1DB954, #191414);
+            background: linear-gradient(to bottom, #6a1b9a, #000);
             font-family: Arial, sans-serif;
             overflow: hidden;
         }
 
-        .spotify-container {
+        .card {
             position: relative;
-            width: 90%;
-            max-width: 500px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
+            width: 400px;
+            border-radius: 16px;
+            background: #2c003e;
+            color: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
             overflow: hidden;
-            transform: scale(0.8);
-            animation: zoomIn 1s ease forwards;
+            animation: fadeIn 1.5s ease-out forwards;
         }
 
-        .spotify-container:hover {
-            transform: scale(1);
-            transition: transform 0.3s ease;
+        .card-header {
+            position: relative;
+            padding: 20px;
+            text-align: center;
         }
 
-        iframe {
-            border-radius: 12px;
-            width: 100%;
-            height: 352px;
+        .card-header h1 {
+            font-size: 2em;
+            margin: 0;
+            animation: slideIn 1.5s ease-in-out forwards;
+        }
+
+        .card-content {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .card-content p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .card-content button {
+            margin-top: 10px;
+            padding: 10px 20px;
             border: none;
+            border-radius: 20px;
+            background: #1db954;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        @keyframes zoomIn {
+        .card-content button:hover {
+            background: #14833b;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
             from {
-                transform: scale(0.8);
                 opacity: 0;
+                transform: translateY(20px);
             }
             to {
-                transform: scale(1);
                 opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
             }
         }
     </style>
 </head>
 <body>
-    <div class="spotify-container">
-        <iframe 
-            src="https://open.spotify.com/embed/track/1is8gU4RVcN4J8xItxWoOY?utm_source=generator" 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-            loading="lazy">
-        </iframe>
+    <div class="card">
+        <div class="card-header">
+            <h1>Waduh</h1>
+        </div>
+        <div class="card-content">
+        </div>
     </div>
 </body>
 </html>
