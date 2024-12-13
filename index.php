@@ -37,19 +37,22 @@
             width: 100%;
             height: 352px;
             border: none;
+            position: relative;
+            z-index: 1;
         }
 
         h1 {
             position: absolute;
-            top: -70px; /* Jarak dari elemen utama */
+            top: 20px;
             left: 50%;
             transform: translateX(-50%);
             color: white;
             font-size: 3rem;
             font-weight: bold;
             margin: 0;
+            z-index: 10; /* Pastikan elemen ini berada di atas */
+            pointer-events: none; /* Agar tidak terganggu elemen iframe */
             opacity: 0;
-            z-index: 10; /* Pastikan elemen berada di atas */
             animation: fadeInMove 1.5s ease forwards;
         }
 
