@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waduuhhh</title>
+    <title>Waduhhh</title>
     <style>
         body {
             margin: 0;
@@ -41,7 +41,7 @@
 
         h1 {
             position: absolute;
-            top: -60px;
+            top: -70px; /* Jarak dari elemen utama */
             left: 50%;
             transform: translateX(-50%);
             color: white;
@@ -49,6 +49,7 @@
             font-weight: bold;
             margin: 0;
             opacity: 0;
+            z-index: 10; /* Pastikan elemen berada di atas */
             animation: fadeInMove 1.5s ease forwards;
         }
 
