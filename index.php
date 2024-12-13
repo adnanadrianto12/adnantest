@@ -20,7 +20,7 @@
             position: relative;
             width: 400px;
             border-radius: 16px;
-            background: #2c003e;
+            background: rgba(44, 0, 62, 0.9);
             color: white;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
             overflow: hidden;
@@ -28,9 +28,8 @@
         }
 
         .card-header {
-            position: relative;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
         }
 
         .card-header h1 {
@@ -41,28 +40,15 @@
 
         .card-content {
             padding: 20px;
-            background: rgba(0, 0, 0, 0.3);
         }
 
-        .card-content p {
-            margin: 0;
-            font-size: 1.2em;
-        }
-
-        .card-content button {
-            margin-top: 10px;
-            padding: 10px 20px;
+        .spotify-iframe {
+            margin-top: 20px;
+            border-radius: 12px;
+            width: 100%;
+            height: 352px;
             border: none;
-            border-radius: 20px;
-            background: #1db954;
-            color: white;
-            cursor: pointer;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        .card-content button:hover {
-            background: #14833b;
-            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         @keyframes fadeIn {
@@ -92,6 +78,13 @@
             <h1>Waduh</h1>
         </div>
         <div class="card-content">
+            <iframe 
+                class="spotify-iframe" 
+                src="https://open.spotify.com/embed/track/1is8gU4RVcN4J8xItxWoOY?utm_source=generator" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
         </div>
     </div>
 </body>
